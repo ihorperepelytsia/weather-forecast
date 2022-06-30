@@ -1,5 +1,4 @@
 import Chart from 'chart.js/auto';
-import { mapperFiveDays } from '../utils/mapperFiveDays';
 import { refs } from './refs';
 
 refs.diagramButton.addEventListener('click', () => {
@@ -7,7 +6,7 @@ refs.diagramButton.addEventListener('click', () => {
   setTimeout(() => {
     refs.diagramContainer.classList.toggle('is-hidden');
   }, 500);
-  console.log(refs.diagramContainer.classList.contains('opacityOn'));
+
   if (refs.diagramContainer.classList.contains('opacityOn')) {
     refs.diagramButtonText.textContent = 'Show Chart';
     refs.diagramButtonImg.style.transform = 'rotate(90deg)';
@@ -38,7 +37,6 @@ const labels = [firstDay, secondDay, thirdDay, fourthDay, fifthDay];
 export function getChart(myData) {
   const createMyChart = '<canvas id="myChart"></canvas>';
   refs.diagramContainer.insertAdjacentHTML('beforeend', createMyChart);
-
   const data = {
     labels: labels,
     datasets: [

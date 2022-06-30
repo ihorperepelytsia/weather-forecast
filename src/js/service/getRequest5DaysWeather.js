@@ -13,7 +13,10 @@ export async function getRequest5DaysWeather(city = 'lviv') {
     const myData = searchCityWeather.data;
 
     createMarkupFiveDays(mapperFiveDays(myData));
-    getChart(mapperFiveDays(myData));
+
+    if (myData) {
+      getChart(mapperFiveDays(myData));
+    }
   } catch (err) {
     error({
       text: `Ooops! ${err.message}`,

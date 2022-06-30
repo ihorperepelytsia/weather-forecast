@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="search">
+      <div class="search-container">
+        <div class="search-container-geolocation">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            height="22"
+            viewbox="0 0 22 22"
+            width="22"
+          >
+            <g>
+              <g opacity=".54">
+                <image
+                  width="22"
+                  height="22"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABuklEQVRIS63VseuNURzH8devDAaDwWCgFIrBRlFMGERRFGJRBgODovwHFkpRyICJMlDYlIGi2BgUZWBQFoNR0Uff59e5T8/luXXP8tTte97nc77n8/neBePX7ypdGLNlVFGB5greimPId3Md8BKvcRfvp6mfpngdrmPXf659H2fxrV83BN6Ox1iOH7iBp/ham9fiAE5iaf2+Gx9aeB+8AW+wDI9wouBDwlfhHiIkh25plffBr6qfueLREa+/BM8LPrGnBe/Fkzp1PX6OAKckyj9WWzZ1D9qCH+AQzuHySGhXdhWncQnn82ML/lKnR+2nGcE78Qyx4o4O3Bm/Y80Smm7PGnzuu2Ie4PQ5N15crbrvWIHVjWfHdiSWe4G3ZbuJHicU+3AKN8cSq+4iLuAazvQf7zDixTzcRvwaCU9C0998t9UcmVAcs79D0nelZsAY9sOKeFyRaP9dfQdkiqVXOSTweHKa8sT+Fo5U7BPpRZsOWetgtSTwFMb07RDK5NtfQVpZCd1THh50RXvtKL9dbflXOzKXM6gmJttQK1pIFEf98RpMsWJWJlmAd+omgwfPkrK5/jW1amYC/wHaQFIV8nDtygAAAABJRU5ErkJggg=="
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <input
+          class="search-container-input"
+          type="text"
+          placeholder="Enter the city"
+        />
+        <div class="search-container-star">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewbox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+            />
+            <path d="M0 0h24v24H0z" fill="none" />
+          </svg>
+        </div>
+      </div>
+      <div class="search-star">
+        <div class="nextBtn invisible"></div>
+        <div class="prevBtn invisible"></div>
+      </div>
+    </form>
+    <div class="today">
+      <div class="today-weather">
+        <div class="today-weather__sky">
+          <img src="./images/searchIcon/icon.png" />
+        </div>
+        <p class="today-weather__city">Kydssiv, UKsdsdR</p>
+        <div class="today-weather__temperature">
+          <p class="today-weather__temperature-current">-7</p>
+          <div class="today-weather__temperature-day">
+            <div class="today-weather__temperature-day-min">
+              <p class="today-weather__temperature-day-min--text">min</p>
+              <p class="today-weather__temperature-day-min--temp">5</p>
+            </div>
+            <div class="today-weather__temperature-day-max">
+              <p class="today-weather__temperature-day-max--text">max</p>
+              <p class="today-weather__temperature-day-max--temp">8</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="today-button">
+        <button class="today-button__today">Today</button>
+        <button class="today-button__five-day">5 Day</button>
+      </div>
+      <div class="today-wrapper">
+        <div class="today-date">
+          <div class="today-date__current-day">
+            <p class="today-date__current-day-st"></p>
+            <span class="today-date__current-day-span"></span>
+            <p class="today-date__current-day-week"></p>
+          </div>
+          <div class="today-date__current-month">
+            <p class="today-date__current-month-now"></p>
+            <p class="today-date__current-month-time"></p>
+          </div>
+          <div class="today-date__sun">
+            <div class="today-date__sun-sunset">
+              <img src="./images/searchIcon/sunrise.png" alt="sunrise" /><span
+                >17:05</span
+              >
+            </div>
+            <div class="today-date__sun-sunrise">
+              <img src="./images/searchIcon/sunset.png" alt="sunset" /><span
+                >17:05</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="today-quote">
+          <p class="today-quote__text">
+            Wherever there is danger, there lurks opportunity; wherever there is
+            opportunity, there lurks danger. The two are inseparable.
+          </p>
+          <p class="today-quote__owner">Earl Nightingale</p>
+        </div>
+      </div>
+    </div>
+    <div class="five-days">
+      <h3 class="five-days-city">Kyiv, UA</h3>
+      <div class="five-days-weather"></div>
+      <div class="five-days-button">
+        <div class="five-days-button__prev"></div>
+        <div class="five-days-button__next"></div>
+      </div>
+      <div class="more-info"></div>
+    </div>
+    <div class="diagram">
+      <div class="diagram-button">
+        <p class="diagram-button__text">Show Chart</p>
+        <div class="diagram-button__img"></div>
+      </div>
+      <div class="diagram-container is-hidden opacityOn"></div>
+    </div>
+
+    <div class="spinner-overlay is-hidden" id="spinner">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+.diagram {
+  &-button {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 15px;
+    cursor: pointer;
+
+    &__text {
+      color: #ff6b08;
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 22px;
+      text-align: center;
+      text-decoration: underline;
+      margin-bottom: 14px;
+      margin: 5px 0 0;
+    }
+    &__img {
+      width: 27px;
+      height: 27px;
+      background-color: rgba(241, 241, 241, 0.2);
+      border: none;
+      border-radius: 50%;
+      transition: all linear 0.9s;
+      background-image: url(../images/searchIcon/Слой_42.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(90deg);
+    }
+  }
+  &-container {
+    width: 280px;
+    height: 518px;
+    box-shadow: 0 8px 43px rgba(16, 33, 54, 0.59);
+    border-radius: 35px;
+    background-color: rgba(16, 33, 54, 0.8);
+    padding: 15px;
+    transition: all linear 500ms;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .diagram {
+    &-button {
+      &__text {
+        font-size: 16px;
+      }
+    }
+    &-container {
+      width: 650px;
+      height: 455px;
+      padding: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: 1096px) {
+  .diagram {
+    &-button {
+      width: 150px;
+      &__text {
+        font-size: 20px;
+      }
+    }
+    &-container {
+      width: 1060px;
+      height: 550px;
+      padding: 32px 136px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.background-image {
+}
+body {
+  margin: 0 auto;
+  min-width: 360px;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.45) 100%,
+      rgba(0, 0, 0, 0.05) 0%
+    ),
+    url(../images/backgroundBody/mobile_background.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  transition: all linear 300ms;
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.45) 100%,
+        rgba(0, 0, 0, 0.05) 0%
+      ),
+      url(../images/backgroundBody/tablet_background.png);
+  }
+}
+@media screen and (min-width: 1096px) {
+  body {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.45) 100%,
+        rgba(0, 0, 0, 0.05) 0%
+      ),
+      url(../images/backgroundBody/desktop_background.png);
+  }
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}

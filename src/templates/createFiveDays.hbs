@@ -1,0 +1,18 @@
+{{#each this}}
+<div class="five-days-weather__oneday" data-day="{{this.date}}">
+    <p  class="five-days-weather__oneday-week" data-day="{{this.date}}">{{this.day}}</p>
+    <p  class="five-days-weather__oneday-date" data-day="{{this.date}}">{{this.date}} {{this.month}}</p>
+    <div  class="five-days-weather__oneday-sky" data-day="{{this.date}}"><img   data-day="{{this.date}}" src="http://openweathermap.org/img/wn/{{this.icon}}@2x.png"></div>
+    <div class="five-days-weather__oneday-temperature" data-day="{{this.date}}">
+        <div class="five-days-weather__oneday-temperature-min" data-day="{{this.date}}">
+            <p class="five-days-weather__oneday-temperature-min--text" data-day="{{this.date}}">min</p>
+            <p class="five-days-weather__oneday-temperature-min--temp" data-day="{{this.date}}">{{this.temp_min}}&#176</p>
+        </div>
+        <div class="five-days-weather__oneday-temperature-max" data-day="{{this.date}}">
+            <p class="five-days-weather__oneday-temperature-max--text" data-day="{{this.date}}">max</p>
+            <p class="five-days-weather__oneday-temperature-max--temp" data-day="{{this.date}}">{{this.temp_max}}&#176</p>
+        </div>
+    </div>
+    <button class="five-days-weather__oneday-moreInfo-button" data-day="{{this.date}}">more info</button>
+</div>
+{{/each}}

@@ -1,0 +1,16 @@
+{{#each this}}
+<div class="more-info-card" data-day="{{this.date}}">
+    <p class="more-info-card__time">{{this.timeDt}}</p>
+    <div class="more-info-card__sky"><img src="http://openweathermap.org/img/wn/{{this.icon}}@2x.png"></div>
+    <p class="more-info-card__temperature">{{this.temp}}&#176</p>
+    <div class="more-info-card__details">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAMAAAC+oj0CAAAAAXNSR0IB2cksfwAAASBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Q+EZnwAAAGB0Uk5TAARcaWUdA3gXQIomB1JqLIdhHF4zRhqFKFhXLl0hMXYeVHcVH3VvCU04bTRRcAZabBYrhj9JIBE+CwhrYlVjAQUZDWdMPGQbD39ZUxNBc087VmZ7GF81JXQUW3J5Q4IK4T9MmAAAARtJREFUeJxdT2lbgmAQHAS5KgpKSpO8FS9KM0ugwCu7zMzu8///i3pfNHyaDzuz++zO7gJLYCIsy0XxD7wQiYqSvDJPV+e8ppC4vqFqNN3cohSTdcpabHuHcDyBXSCpGAu3vRSJ6QyyuXxhaUsxiCWznK+EVU1AtaYm65a+j4OEnmtQNA9bkI7K7WPxRO7YcdZRKNzghNPIWVKyfu+2LcYDvMDJ7zKhrddrlxbaz7j9ARFD95zrj+bVi8srzWArPJC9vglmANuUx0TeToBJDeLd9F7tQZy5VdrRlVt46PuzR/NJ51EcLDY8v0xReX1L0+R96WfBaNvjoO2jEZY5CWjWeSI/vzSfofCHQgewzG/a0io4LHmZdVKjv7kf/2chULzkz3cAAAAASUVORK5CYII="><span>{{this.pressure}} mm</span>
+    </div>
+    <div class="more-info-card__details">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAMAAABh7EcdAAAAAXNSR0IB2cksfwAAAPBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5dXC4QAAAFB0Uk5TAFsjLYVdAXMFTj5KSwtuDXIJTE9BZxJmAkNWWjhtGA9oA0JRRghiVEAwXDQrUjwEihM2Kk1HVVM7H3EiMmB1PShjIRlFLxp5HllrJBEXWCztZj+HAAAAvElEQVR4nEWO1xaCQAxEBwt2sbuKBbsiWFGwF+z1///GZUHNQyY3yZwEYMG58A+3x8v/gPf5A8EfhcKIRCMOCLE4kEg6xKWs7bTAIJMlluTyjMQCE1Is0VyWKrahWqOpnnPsxOtHo1n+Hmq10ZGBbh0CNSsy1B760cGQG9GhCm4MXpuoU2t1At2gMtOV+QLQsVzR19YZY7DBdgeS3sNUYB4IpCNwOl/sA1fm3d60++PZbcp2s6GJ+evrTasP8SMSDC+Q938AAAAASUVORK5CYII="><span>{{this.humidity}}%</span>
+    </div>
+    <div class="more-info-card__details">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAAXNSR0IB2cksfwAAAO1QTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////bAyRTwAAAE90Uk5TAB9ugHcwKopfLkxKb3t2RQFOKw9bVzVHfQgYDEYNeB2EL1VTaWdmeYchUEtdXEQKiEFST2GDbQJacnBkPzQzZXp8bAQkcRYcAyxWJYJ1f4MzuKUAAADRSURBVHicdZDnEoJADIRjjQVUwILYC4qKvffesLz/4wh3Oiri9yObyc5tMgdAsdkdThf84kaP14d+o3UxbCD4moeQ0yuPAkAYI9GYyMapIWHCEDYISUwZnZimRjxDJMsD5ujA8bkoj5DBZ89BoSgTSnJZqYDAP40q1NQwoa42mu/HiZbF6WQbA+1O1wTX7fUHQxiN7WYm09mfIPoZ88U386hEjKXIfrNaK2rIOkRqbf7Eb5E3j3Z7IkzHbBzwqNcTnn9SNLykjgpjka9db3dZ1wdFoxkq8C4QFAAAAABJRU5ErkJggg=="><span>{{this.speed}} m/s</span>
+    </div>
+</div>
+{{/each}}

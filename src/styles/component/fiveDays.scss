@@ -1,0 +1,222 @@
+.opacityOff {
+  opacity: 1;
+  transition: all linear 500ms;
+}
+.opacityOn {
+  opacity: 0;
+  transition: all linear 500ms;
+}
+.five-days {
+  width: 280px;
+  font-family: Lato;
+  box-shadow: 0 8px 43px rgba(16, 33, 54, 0.59);
+  border-radius: 35px;
+  background-color: rgba(16, 33, 54, 0.8);
+  margin: 0 auto 24px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 22px;
+  text-align: center;
+
+  &-city {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 32px;
+    margin: 0 0 22px 0;
+  }
+  &-weather {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-bottom: 18px;
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &__oneday {
+      cursor: pointer;
+      transition: all linear 300ms;
+      padding: 0 20px;
+      &-week {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 18px 0;
+      }
+      &-date {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+      }
+      &-sky {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      &-temperature {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+        &-min {
+          padding: 0 8px;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          &--text {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            font-weight: 400;
+          }
+          &--temp {
+            margin: 0;
+            color: #ff6b08;
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+        &-max {
+          margin: 0 0 0 8px;
+          &--text {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            font-weight: 400;
+          }
+          &--temp {
+            margin: 0;
+            color: #ff6b08;
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+      &-moreInfo-button {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 12px;
+        font-weight: 400;
+        @extend %transparent-button;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__oneday:hover .five-days-weather__oneday-moreInfo-button {
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  &-button {
+    margin-bottom: 18px;
+    &__prev {
+      border: solid rgba(255, 255, 255, 0.5);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      margin-right: 40px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    &__next {
+      border: solid rgba(255, 255, 255, 0.5);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      cursor: pointer;
+      padding: 6px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .five-days {
+    width: 650px;
+    &-city {
+      font-size: 28px;
+    }
+    &-weather {
+      overflow: visible;
+      justify-content: space-between;
+      &__oneday {
+        padding: 0 14px;
+        &-week {
+          font-size: 14px;
+        }
+        &-date {
+          font-size: 18px;
+        }
+        &-temperature {
+          margin-bottom: 26px;
+          &-min {
+            padding: 0 14px;
+            &--text {
+              font-size: 14px;
+            }
+            &--temp {
+              font-size: 18px;
+            }
+          }
+          &-max {
+            margin: 0 0 0 14px;
+            &--text {
+              font-size: 14px;
+            }
+            &--temp {
+              font-size: 18px;
+            }
+          }
+        }
+        &-moreInfo-button {
+          font-size: 14px;
+          margin-bottom: 32px;
+        }
+      }
+    }
+    &-button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1096px) {
+  .five-days {
+    width: 1060px;
+    &-weather {
+      justify-content: space-around;
+      &__oneday {
+        &-week {
+          font-size: 18px;
+        }
+        &-date {
+          font-size: 24px;
+          margin: 0 0 34px 0;
+        }
+        &-sky {
+          margin-bottom: 36px;
+        }
+        &-temperature {
+          margin-bottom: 26px;
+          &-min {
+            &--text {
+              font-size: 18px;
+            }
+            &--temp {
+              font-size: 24px;
+            }
+          }
+          &-max {
+            &--text {
+              font-size: 18px;
+            }
+            &--temp {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
